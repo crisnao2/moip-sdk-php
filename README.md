@@ -761,6 +761,29 @@ try {
 }
 ```
 
+## Funções Helper
+
+to_cents: converte um valor de moeda (representado por float ou string, ex: R$ 5,00 ou 5.00) para centavos (representado por um inteiro, ex: 500)
+```php
+echo to_cents(5.00); // 500
+```
+
+to_float: converte um valor de centavos (representado por um inteiro, ex: 500)  para float
+```php
+echo to_float(500); // 5.00
+```
+
+pr: função print_r já com <pre> incluído, para conveniência
+```php
+pr(array(1,2));
+// saída
+// Array
+// (
+//     [0] => 1
+//     [1] => 2
+// )
+```
+
 ## Documentação
 
 [Documentação oficial](https://documentao-moip.readme.io/v2.0/reference)

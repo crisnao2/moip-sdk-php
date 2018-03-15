@@ -59,4 +59,22 @@ class Utils
 
         return $whole + $fraction;
     }
+
+    /**
+    * Convert um amount in cents (represented by int) to float
+    *
+    * @param integer $amount
+    *
+    * @return float
+    */
+    public static function toFloat(int $amount)
+    {
+        if (!is_int($amount)) {
+            $type = gettype($amount);
+
+            throw new \UnexpectedValueException("Needs a Int! not $type");
+        }
+
+        return (float) sprintf("%.2f", ($amount / 100));
+    }
 }

@@ -16,6 +16,20 @@ if (!function_exists('to_cents')) {
     }
 }
 
+if (!function_exists('to_float')) {
+    /**
+    * Convert um amount in cents (represented by int) to float
+    *
+    * @param integer $amount
+    *
+    * @return float
+    */
+    function to_float(int $amount)
+    {
+        return Moip\Helper\Utils::toFloat($amount);
+    }
+}
+
 if (!function_exists('pr')) {
     /**
      * print_r() convenience function.

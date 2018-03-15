@@ -773,16 +773,18 @@ to_float: converte um valor de centavos (representado por um inteiro, ex: 500)  
 echo to_float(500); // 5.00
 ```
 
-pr: função print_r já com <pre> incluído, para conveniência
+pr: função print_r já com pre incluído, para conveniência
 ```php
 pr(array(1,2));
-// saída
-// Array
-// (
-//     [0] => 1
-//     [1] => 2
-// )
 ```
+Saída
+<pre>
+Array
+(
+    [0] => 1
+    [1] => 2
+)
+</pre>
 
 ## Documentação
 

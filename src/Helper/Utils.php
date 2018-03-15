@@ -67,7 +67,7 @@ class Utils
     *
     * @return float
     */
-    public static function toFloat(int $amount)
+    public static function toFloat($amount)
     {
         if (!is_int($amount)) {
             $type = gettype($amount);

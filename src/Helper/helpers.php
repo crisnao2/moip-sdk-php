@@ -24,7 +24,7 @@ if (!function_exists('to_float')) {
     *
     * @return float
     */
-    function to_float(int $amount)
+    function to_float($amount)
     {
         return Moip\Helper\Utils::toFloat($amount);
     }

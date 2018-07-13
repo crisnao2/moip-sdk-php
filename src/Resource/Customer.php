@@ -165,6 +165,16 @@ class Customer extends MoipResource
     }
 
     /**
+     * Get customer email.
+     *
+     * @return string Customer's email.
+     */
+    public function getEmail()
+    {
+        return $this->getIfSet('email');
+    }
+
+    /**
      * Get funding instrument from customer.
      *
      * @return \stdClass Structure that is the means of payment.

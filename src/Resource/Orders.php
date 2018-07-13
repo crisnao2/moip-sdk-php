@@ -147,8 +147,8 @@ class Orders extends MoipResource
         $this->orders->data->id = $response->id;
         $this->orders->data->ownId = $response->ownId;
         $this->orders->data->createdAt = $response->createdAt;
-        $this->orders->data->updatedAt = $response->updatedAt;
-        $this->orders->data->amount->paid = $response->amount->paid;
+        $this->orders->data->updatedAt = !empty($response->updatedAt) ? $response->updatedAt : $response->createdAt;
+        $this->orders->data->amount->paid = !empty($response->amount->paid) ? $response->amount->paid : null;
         $this->orders->data->amount->total = $response->amount->total;
         $this->orders->data->amount->fees = $response->amount->fees;
         $this->orders->data->amount->refunds = $response->amount->refunds;
